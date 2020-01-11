@@ -8,6 +8,7 @@ tags:
   - "algorithm"
   - "blog"
 banner: "/assets/bg/1.jpg"
+toc: true
 ---
 
 ## 알고리즘 문제풀이 스터디 2020-01-05
