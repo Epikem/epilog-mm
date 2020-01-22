@@ -32,3 +32,13 @@ scoop install FiraCode
 
 현재 `node-gyp`를 쓰는 프로젝트를 고치지 못하고 있음.
 
+robotjs, @tensorflow/tfjs-node
+
+windows-build-tools 를 다시 설치하고 아래 명령으로
+node-gyp도 업데이트하여 설치는 성공했다.
+npm install -g node-gyp@latest
+
+돌렸더니 깔지도 않은 webgl관련 typescript type 에러가 나서 찾아보다가, tensorflowjs쓰려면 `tsconfig.json`에서 `skipLibCheck:true`옵션을 주어야 한다고 해서 그렇게 했더니 실행이 되었다.
+비록 실행 도중 도메인 에러가 났지만.
+
+그 외에도 anaconda 등 에러가 나는 패키지들의 경우 `scoop update`, `scoop reset`으로 고침
