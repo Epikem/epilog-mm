@@ -3,6 +3,7 @@ category: "algorithm"
 tags: 
   - "algorithm"
   - "blog"
+last_modified_at: 2020-02-01
 ---
 
 ## 백준 알고리즘 스터디 - 투 포인터 및 슬라이딩 윈도우
@@ -144,7 +145,7 @@ using namespace std;
 
 ### bj 1484 - 다이어트
 
-범위조정 문제로 5미스
+범위조정 문제로 5미스. 비효율적인 방법으로 품.
 
 <details><summary markdown="span">cpp solution</summary>
 
@@ -192,10 +193,56 @@ void solve(){
     {
         cout << arr[i] << '\n';
     }
-    
+}
 
+```
+
+영 궁금해서 [다른 블로그](http://joonas-yoon.blogspot.com/2016/03/1484.html)에 있는 이진 탐색 풀이를 가져와 돌려보니 8ms가 나왔다. 하고 안하고에 따라 400ms, 8ms이니 차이가 크긴 한데 여전히 0ms는 어떻게 가능한건지 모르겠다.
+
+[또다른 블로그](https://baelanche.tistory.com/249)에서 해답을 찾았다. 역시 투포인터로 해야 가능한 것이었다. 차이를 계산하는 두 비교대상인 몸무게가 가리키는 것은 자연수로 비교 가능한 대상이다. 생각한 현재 몸무게가 늘 수록, 이전 몸무게가 줄 수록 제곱 차이 G는 커지고, 반대는 작아진다. 이걸 왜 못찾았지? 게다가 현재 몸무게 자체를 포인터로 두면서 더하면서 찾으면 sqrt같은 걸 쓸 필요도 없어진다.
+
+투포인터를 강제하려면 c++은 제한시간 0.1초를 줘야 할 지도.
+
+투포인터로 재시도. 아이디어를 알고도 시작조건과 종료조건 문제로 8번 틀림(한숨).
+
+```cpp
+const int MAXX=1000000005;
+
+using namespace std;
+
+
+void solve(){
+    long G;
+    cin>>G;
+    long i,j,k,tmp;
+    long lo=1,hi=2; // 몸무게이고, 증가량 G가 자연수이므로 시작조건은 최소 이전 몸무게 1, 현재 몸무게 2부터 시작해야 한다.
+    // hi hi - lo lo = G
+    long diff=hi*hi-lo*lo;
+    bool found=false;
+    while(true){    // diff<=100005 이런 식으로 하게 되면, hi-lo가 커서 20만 차이 나지만, lo를 늘리면 다시 다른 G를 찾을 수 있는데도 종료되게 되서 틀린다.
+        if(diff>100000 && hi-lo==1) break;
+        // diff가 G와 같다면 -> 둘 다 1씩 늘림
+        // diff가 G보다 작다면: hi를 늘림
+        // diff가 G보다 크다면: lo를 늘림
+        if(diff==G){
+            cout<<hi<<'\n';
+            found=true;
+            lo++;hi++;
+        } else if(diff<G){
+            hi++;
+        } else {
+            lo++;
+        }
+        diff=hi*hi-lo*lo;
+    }
+    if(!found){
+        cout<<-1<<endl;
+    }
 }
 ```
+
+
+
 
 </details>
 
