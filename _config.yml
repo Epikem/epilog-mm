@@ -111,6 +111,14 @@ defaults:
       layout: single
       author_profile: true
 
+repository: "epikem/epikem.github.io"
+
+comments:
+  provider: "utterances"
+  utterances:
+    theme: "github-dark"
+    issue_term: "pathname"
+
 category_archive:
   type: liquid
   path: /categories/
