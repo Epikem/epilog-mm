@@ -3,7 +3,6 @@ category: "algorithm"
 tags: 
   - "algorithm"
   - "blog"
-  - "codeup"
   - "python"
 ---
 

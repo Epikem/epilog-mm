@@ -1,8 +1,8 @@
 ---
 date: "2019-05-13"
 title: "grep-recursive-file-content-search"
-category: "TIL"
-tags: ["til", "linux", "shell"]
+category: "blog"
+tags: ["linux", "shell"]
 banner: "/assets/bg/2.jpg"
 ---
 

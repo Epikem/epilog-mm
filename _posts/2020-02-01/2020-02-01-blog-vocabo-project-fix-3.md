@@ -2,9 +2,11 @@
 category: "project"
 tags: 
   - "blog"
-  - "project/vocabo"
-  - "web/nodejs"
-  - "web/react"
+  - "project"
+  - "vocabo"
+  - "web"
+  - "nodejs"
+  - "react"
 banner: "/assets/bg/3.jpg"
 ---
 

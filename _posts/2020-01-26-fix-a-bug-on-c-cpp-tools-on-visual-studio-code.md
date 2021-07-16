@@ -3,7 +3,7 @@ template: "post"
 category: "blog"
 tags: 
   - "cpp"
-  - "tips"
+  - "tip"
   - "vscode"
   - "blog"
 banner: "/assets/bg/1.jpg"

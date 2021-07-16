@@ -7,7 +7,7 @@ tags:
   - "blog"
   - "arch/arm"
   - "util"
-  - "tips"
+  - "tip"
 toc: false
 ---
 
