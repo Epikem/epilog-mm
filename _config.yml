@@ -19,9 +19,9 @@ description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in yo
-github_username: epikemur feed.xml site description.
+github_username: epikem
 twitter_username: username
-minimal_mistakes_skin: dark
+minimal_mistakes_skin: neon
 search: true
 
 # Build settings
@@ -62,13 +62,13 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "David Lee"
-  avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  name   : "Epikem"
+  avatar : "https://avatars.githubusercontent.com/u/8192081?v=4"
+  bio    : "Studying for backend"
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://www.epikem.com/epilog-mm/"
+      url: "https://www.epikem.com/"
     # - label: "Twitter"
     #   icon: "fab fa-fw fa-twitter-square"
     #   url: "https://twitter.com/"
